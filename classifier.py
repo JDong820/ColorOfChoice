@@ -23,10 +23,16 @@ def best_match(c, ref):
     return best
 
 def get_ref():
+    """Retreives some reference colors.
+    Format:
+        [("red", 0xFF0000), ("green", 0x00FF00), ("blue", 0x0000FF)]
+    """
     html = requests.get("http://jadecat.com/tuts/colorsplus.html").content
     soup = BeautifulSoup(html)
     return [(e.text[:-6].strip(), int(e.text[-6:], 16)) for e in soup.find_all("td")[2:]]
 
 if __name__ == "__main__":
+    """For testing, just provide a hex value as the argument.
+    """
     r = get_ref()
     print best_match(int(sys.argv[1], 16), r)
