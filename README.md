@@ -14,18 +14,25 @@ dictionaries.
 ### Supported Color Formats
 Supported color formats are: 
 * RGB Color Format
-* CMY(K) Color Format
+* 6-digit and 3-digit hex
 * HSL Color Format
+<!---
+* CMY(K) Color Format
 * YUV Color Format
 * YCbCr Color Format
 * YPbPr Color Format
+-->
+These formats are the formats supported by the python
+[colour](https://github.com/vaab/colour) module.
 
 ### Included Color Dictionaries
 * Wikipedia-based dictionary (default)
 * Pantone® PMS
 * Resene
 * W3 CSS3
+* X11
 * Crayola
+* Python matplotlib
 
 Also see the [sources](#color-dictionary-sources) for more information on
 color names.

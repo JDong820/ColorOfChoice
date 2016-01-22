@@ -1,7 +1,7 @@
 PROJECT=color_names
 PYTHON := /usr/bin/env python
 PYTHON_VERSION=$(shell $(PYTHON) -c 'import sys; print(sys.version_info[0])')
-COLOR_NAMES_VERSION=$(shell $(PYTHON) -c 'import COLOR_NAMES; print(COLOR_NAMES.__version__)')
+COLOR_NAMES_VERSION=$(shell $(PYTHON) -c 'import color_names; print(color_names.__version__)')
 
 default:
 	@echo "install: install the package and scripts"

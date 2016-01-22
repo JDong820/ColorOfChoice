@@ -7,7 +7,7 @@ if sys.version_info <= (3, 0):
           "(bleeding edge preferred)", file=sys.stderr)
     sys.exit(1)
 
-with open('README.rst') as f:
+with open('README.md') as f:
     long_description = f.read()
 
 setup(
@@ -16,6 +16,9 @@ setup(
     description="Translate color names to specific values.",
     long_description=long_description,
     url="https://github.com/jdongian/python-color_names",
+    install_requires=[
+        "colour >= 0.1.2"
+    ],
     author="Joshua Dong",
     author_email="jdong42@gmail.com",
     license="http://www.apache.org/licenses/LICENSE-2.0",
